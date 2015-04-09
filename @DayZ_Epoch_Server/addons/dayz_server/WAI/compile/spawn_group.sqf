@@ -126,7 +126,10 @@ if (isServer) then {
 			_unit enableAI "MOVE";
 			_unit enableAI "ANIM";
 			_unit enableAI "FSM";
-		
+			//Currency
+		_cash = round(random 20) * 1000; // number between 0 and 20 000
+		_unit setVariable["CashMoney",_cash ,true];
+			
 		};
 
 		removeAllWeapons _unit;

@@ -46,6 +46,11 @@ for "_x" from 1 to _unitcount do {
 	_unit setCombatMode "RED";
 	_unit setBehaviour "STEALTH";
 	
+	//Currency
+	_cash = round(random 20) * 1000; // number between 0 and 20 000
+	_unit setVariable["CashMoney",_cash ,true];
+	
+	
 	//Remove the items he spawns with by default
 	removeAllWeapons _unit;
 	removeAllItems _unit;
